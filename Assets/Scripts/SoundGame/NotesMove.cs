@@ -36,6 +36,9 @@ public class NotesMove : MonoBehaviour {
 		if (diff > time) {
 			transform.position = endPosition;
 			enabled = false;
+
+			// 目的地に到着したら消去する
+			Destroy(gameObject);
 		}
 
 		var rate = diff / time;
